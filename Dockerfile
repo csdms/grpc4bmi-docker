@@ -5,7 +5,7 @@ LABEL author="Mark Piper"
 LABEL email="mark.piper@colorado.edu"
 LABEL organization="CSDMS"
 
-RUN mamba install -y grpcio abseil-cpp && \
+RUN mamba install -y grpc-cpp && \
     mamba clean --all -y
 
 ENV base_url=https://github.com/csdms
