@@ -1,4 +1,4 @@
-# Build the grpc4bmi C++ environment on a mambaforge base.
+# Build grpc4bmi on a mambaforge base.
 FROM csdms/bmi:0.1.1
 
 LABEL author="Mark Piper"
@@ -9,9 +9,9 @@ RUN mamba install -y grpc-cpp && \
     mamba clean --all -y
 
 ENV base_url=https://github.com/csdms
-ENV package=grpc4bmi
-ENV prefix=/opt/${package}
-RUN git clone --branch build-on-mambaforge --depth 1 ${base_url}/${package} ${prefix}
+ENV project=grpc4bmi
+ENV prefix=/opt/${project}
+RUN git clone --branch build-on-mambaforge --depth 1 ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}
 RUN git submodule update --init
 WORKDIR ${prefix}/cpp/_build
