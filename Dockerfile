@@ -15,7 +15,7 @@ RUN git clone --branch build-on-mambaforge --depth 1 ${base_url}/${project} ${pr
 WORKDIR ${prefix}
 RUN git submodule update --init
 WORKDIR ${prefix}/cpp/_build
-RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_PREFIX} && \
+RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} && \
     make && \
     ctest && \
     make install && \
