@@ -5,8 +5,11 @@ LABEL author="Mark Piper"
 LABEL email="mark.piper@colorado.edu"
 LABEL organization="CSDMS"
 
-RUN mamba install -y grpc-cpp && \
-    mamba clean --all -y
+RUN mamba install -y \
+    grpcio \
+    grpcio-reflection \
+    abseil-cpp \
+    && mamba clean --all -y
 
 ENV base_url=https://github.com/csdms
 ENV project=grpc4bmi
