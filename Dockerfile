@@ -1,16 +1,17 @@
-# Build grpc4bmi on a condaforge/miniforge3 base.
-FROM csdms/bmi:0.2.0
+# Build grpc4bmi from gRPC conda packages on a condaforge/miniforge3 base.
+FROM csdms/bmi:0.2.1
 
 LABEL author="Mark Piper"
 LABEL email="mark.piper@colorado.edu"
 LABEL organization="CSDMS"
 
+# See https://github.com/csdms/grpc4bmi-docker/issues/1
 RUN conda install -y \
-    grpcio \
-    grpcio-reflection \
+    grpc-cpp \
     abseil-cpp \
     && conda clean --all -y
 
+# See https://github.com/csdms/grpc4bmi-docker/issues/2
 ENV base_url=https://github.com/csdms
 ENV project=grpc4bmi
 ENV prefix=/opt/${project}
