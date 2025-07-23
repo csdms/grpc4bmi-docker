@@ -1,9 +1,10 @@
 # Build grpc4bmi from gRPC conda packages on a condaforge/miniforge3 base.
 FROM csdms/bmi:0.2.1
 
-LABEL author="Mark Piper"
-LABEL email="mark.piper@colorado.edu"
-LABEL organization="CSDMS"
+LABEL org.opencontainers.image.authors="Mark Piper <mark.piper@colorado.edu>"
+LABEL org.opencontainers.image.url="https://hub.docker.com/r/csdms/grpc4bmi"
+LABEL org.opencontainers.image.source="https://github.com/csdms/grpc4bmi-docker"
+LABEL org.opencontainers.image.vendor="CSDMS"
 
 # See https://github.com/csdms/grpc4bmi-docker/issues/1
 RUN conda install -y \
