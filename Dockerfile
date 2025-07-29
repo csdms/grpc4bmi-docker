@@ -9,7 +9,6 @@ LABEL org.opencontainers.image.vendor="CSDMS"
 # See https://github.com/csdms/grpc4bmi-docker/issues/1
 RUN conda install -y \
     grpc-cpp \
-    abseil-cpp \
     && conda clean --all -y
 
 ENV base_url=https://github.com/csdms
