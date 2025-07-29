@@ -11,6 +11,7 @@ RUN conda install -y \
     grpc-cpp \
     && conda clean --all -y
 
+# See https://github.com/csdms/grpc4bmi-docker/issues/2
 ENV base_url=https://github.com/csdms
 ENV project=grpc4bmi
 ENV version="0.6.0-csdms"
