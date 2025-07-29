@@ -12,11 +12,11 @@ RUN conda install -y \
     abseil-cpp \
     && conda clean --all -y
 
-# See https://github.com/csdms/grpc4bmi-docker/issues/2
 ENV base_url=https://github.com/csdms
 ENV project=grpc4bmi
+ENV version="0.6.0-csdms"
 ENV prefix=/opt/${project}
-RUN git clone --branch build-on-miniforge --depth 1 ${base_url}/${project} ${prefix}
+RUN git clone --branch v${version} --depth 1 ${base_url}/${project} ${prefix}
 WORKDIR ${prefix}
 RUN git submodule update --init
 WORKDIR ${prefix}/cpp/_build
