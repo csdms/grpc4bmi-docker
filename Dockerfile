@@ -1,5 +1,5 @@
 # Build grpc4bmi from gRPC conda packages on a condaforge/miniforge3 base.
-FROM csdms/bmi:0.2.1
+FROM csdms/bmi:0.3.0
 
 LABEL org.opencontainers.image.authors="Mark Piper <mark.piper@colorado.edu>"
 LABEL org.opencontainers.image.url="https://hub.docker.com/r/csdms/grpc4bmi"
