@@ -20,8 +20,6 @@ ENV project=grpc4bmi
 ENV version="0.6.0-csdms"
 ENV prefix=/opt/${project}
 RUN git clone --branch v${version} --depth 1 ${base_url}/${project} ${prefix}
-WORKDIR ${prefix}
-RUN git submodule update --init
 WORKDIR ${prefix}/cpp/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} -DCMAKE_CXX_STANDARD=17 && \
     make && \
