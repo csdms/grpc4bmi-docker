@@ -6,7 +6,6 @@ LABEL org.opencontainers.image.url="https://hub.docker.com/r/csdms/grpc4bmi"
 LABEL org.opencontainers.image.source="https://github.com/csdms/grpc4bmi-docker"
 LABEL org.opencontainers.image.vendor="CSDMS"
 
-# See https://github.com/csdms/grpc4bmi-docker/issues/1
 RUN conda install -y \
     libgrpc \
     libabseil \
