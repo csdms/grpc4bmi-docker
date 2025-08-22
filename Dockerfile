@@ -25,7 +25,7 @@ RUN git submodule update --init
 WORKDIR ${prefix}/cpp/_build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=${CONDA_DIR} -DCMAKE_CXX_STANDARD=17 && \
     make && \
-    ctest && \
+    ctest -V && \
     make install && \
     make clean
 
