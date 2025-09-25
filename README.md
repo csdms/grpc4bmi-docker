@@ -1,3 +1,6 @@
+[![DOI](https://zenodo.org/badge/864270055.svg)](https://doi.org/10.5281/zenodo.17203763)
+![Docker Image Version](https://img.shields.io/docker/v/csdms/grpc4bmi)
+
 # grpc4bmi-docker
 
 Build [grpc4bmi](https://grpc4bmi.readthedocs.io) from gRPC conda packages.
